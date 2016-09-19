@@ -5,7 +5,7 @@ Installation instructions
 
 2. Add the following code to your LocalSettings.php (at the bottom):
 
-require_once( "$IP/extensions/BracketContest/BracketContest.php" );
+wfLoadExtension( 'BracketContest' );
 
 ## Bracket Contest Database settings
 $wgBracketContestDbType     = 'mysql';
