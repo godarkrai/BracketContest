@@ -8,6 +8,10 @@ class SpecialBracketContest extends SpecialPage {
 		$this->controller = new Controller();
 	}
 
+	function getGroupName() {
+		return 'liquipedia';
+	}
+
 	function execute( $par ) {
 		$request = $this->getRequest();
 		$out = $this->getOutput();
@@ -291,7 +295,7 @@ EOT;
 
 		// Rows
 		if (count($rows)) {
-    		foreach($rows as $row) {
+		foreach($rows as $row) {
 				$output .= "|-\n";
 				foreach ($row as $cell) {
 					$cellAttributes = isset( $cell['attributes'] ) ? $cell['attributes'] : array();
@@ -304,9 +308,9 @@ EOT;
 					$output .= '|' . $cell['wikitext'] . "\n";
 				}
 			}
-    	}
+	}
 
-    	// Table
+	// Table
 		$output .= '|}' . "\n";
 
 		return $output;
@@ -332,9 +336,9 @@ EOT;
 		}
 
 		// Rows
-    	$innerTableHTML .= "  <tbody>\n";
+	$innerTableHTML .= "  <tbody>\n";
 		if (count($rows)) {
-    		foreach($rows as $row) {
+		foreach($rows as $row) {
 				$innerTableHTML .= "    <tr>\n";
 				foreach ($row as $cell) {
 					$cellAttributes = isset( $cell['attributes'] ) ? $cell['attributes'] : null;
@@ -342,10 +346,10 @@ EOT;
 				}
 				$innerTableHTML .= "    </tr>\n";
 			}
-    	}
-    	$innerTableHTML .= "  </tbody>\n";
+	}
+	$innerTableHTML .= "  </tbody>\n";
 
-    	// Table
+	// Table
 		$output = Html::rawElement( 'table',
 			$attributes,
 			$innerTableHTML

@@ -1,0 +1,79 @@
+{
+	"name": "BracketContest",
+	"version": "1.0",
+	"author": [
+		"[http://wiki.teamliquid.net/starcraft2/User:PhiLtheFisH PhiLtheFisH]",
+		"[http://wiki.teamliquid.net/starcraft2/User:ChapatiyaqPTSM Chapatiyaq]",
+		"Alex Winkler"
+	],
+	"url": "http://wiki.teamliquid.net/",
+	"descriptionmsg": "bracketcontest-desc",
+	"license-name": "MIT",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.25.0"
+	},
+	"MessagesDirs": {
+		"BracketContest": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SpecialBracketContest": "SpecialBracketContest.php",
+		"Connection": "api/Connection.php",
+		"Contest": "api/Contest.php",
+		"ContestTable": "api/ContestTable.php",
+		"Controller": "api/Controller.php",
+		"Participant": "api/Participant.php",
+		"ParticipantTable": "api/ParticipantTable.php"
+	},
+	"ExtensionMessagesFiles": {
+		"BracketContest": "BracketContest.alias.php"
+	},
+	"SpecialPages": {
+		"BracketContest": "SpecialBracketContest"
+	},
+	"ResourceModules": {
+		"ext.bracketContest.BasePage": {
+			"styles": [
+				"modules/ext.bracketContest.BasePage.css",
+				"modules/ext.bracketContest.theme.default.css"
+			],
+			"scripts": [
+				"modules/jquery.tablesorter.min.js",
+				"modules/ext.bracketContest.BasePage.js"
+			],
+			"position": "top"
+		},
+		"ext.bracketContest.RankingPage": {
+			"styles": [
+				"modules/ext.bracketContest.RankingPage.css",
+				"modules/ext.bracketContest.theme.default.css",
+				"modules/jquery.tablesorter.pager.min.css"
+			],
+			"scripts": [
+				"modules/jquery.tablesorter.min.js",
+				"modules/jquery.tablesorter.pager.min.js",
+				"modules/jquery.tablesorter.widgets.min.js",
+				"modules/jquery.tablesorter.widgets-filter-formatter.min.js",
+				"modules/ext.bracketContest.RankingPage.js"
+			],
+			"position": "top"
+		},
+		"ext.bracketContest.UserPage": {
+			"styles": [
+				"modules/ext.bracketContest.theme.default.css"
+			],
+			"scripts": [
+				"modules/jquery.tablesorter.min.js",
+				"modules/ext.bracketContest.UserPage.js"
+			],
+			"position": "top"
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "BracketContest"
+	},
+	"manifest_version": 1
+}

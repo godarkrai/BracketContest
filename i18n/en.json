@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"PhiLtheFishH",
+			"Chapatiyaq"
+		]
+	},
+	"bracketcontest": "Bracket Contest",
+	"bracketcontest-desc": "Liquipedia Bracket Contest Tool front-end",
+	"specialpages-group-liquipedia": "Liquipedia",
+	
+	"bracketcontest-base-page-title": "Liquipedia Bracket Contests",
+	"bracketcontest-all-contests": "All contests",
+	"bracketcontest-contest-not-found": "No contest matching this id was found.",
+	"bracketcontest-participant-not-found": "No participant matching this id was found.",
+	"bracketcontest-user-submissions-title": "User submissions",
+	"bracketcontest-user-submissions-subtitle-start": "For [[User:$1|$1]]",
+
+	"bracketcontest-name": "Name",
+	"bracketcontest-points": "Points",
+	"bracketcontest-maxpossiblepoints": "Max possible",
+	"bracketcontest-submission": "Submission",
+	"bracketcontest-link": "link",
+	"bracketcontest-title": "Title",
+	"bracketcontest-game": "Game",
+	"bracketcontest-start": "Start",
+	"bracketcontest-submissions-before": "Submissions before",
+	"bracketcontest-end": "End"
+}
