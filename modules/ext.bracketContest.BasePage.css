@@ -95,3 +95,19 @@
 	background-repeat: no-repeat;
 	background-position: 0 2px;
 }
+
+#contest td.overwatch {
+	padding-left: 30px;
+	/* @embed */
+	background-image: url(icons/overwatchlogo_std.png);
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+}
+
+#contest td.rocket-league {
+	padding-left: 30px;
+	/* @embed */
+	background-image: url(icons/rocketleaguelogo_std.png);
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+}
