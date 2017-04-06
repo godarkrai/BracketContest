@@ -18,6 +18,9 @@
 			"i18n"
 		]
 	},
+	"ExtensionMessagesFiles": {
+		"BracketContestAlias": "BracketContest.alias.php"
+	},
 	"AutoloadClasses": {
 		"SpecialBracketContest": "SpecialBracketContest.php",
 		"Connection": "api/Connection.php",
@@ -26,9 +29,6 @@
 		"Controller": "api/Controller.php",
 		"Participant": "api/Participant.php",
 		"ParticipantTable": "api/ParticipantTable.php"
-	},
-	"ExtensionMessagesFiles": {
-		"BracketContest": "BracketContest.alias.php"
 	},
 	"SpecialPages": {
 		"BracketContest": "SpecialBracketContest"
