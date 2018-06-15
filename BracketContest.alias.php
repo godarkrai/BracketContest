@@ -1,23 +1,23 @@
 <?php
+
 /**
  * Aliases for bracketcontest
  *
  * @file
  * @ingroup Extensions
  */
- 
-$specialPageAliases = array();
- 
+$specialPageAliases = [];
+
 /** English
  * @author PhiLtheFisH & Chapatiyaq
  */
-$specialPageAliases['en'] = array(
-	'BracketContest' => array( 'BracketContest', 'Bracket Contest' ),
-);
- 
+$specialPageAliases[ 'en' ] = [
+	'BracketContest' => [ 'BracketContest', 'Bracket Contest' ],
+];
+
 /** French
  * @author PhiLtheFisH & Chapatiyaq
  */
-$specialPageAliases['fr'] = array(
-	'BracketContest' => array( 'ConcoursDeBrackets', 'Concours de Brackets' ),
-);
+$specialPageAliases[ 'fr' ] = [
+	'BracketContest' => [ 'ConcoursDeBrackets', 'Concours de Brackets' ],
+];

@@ -10,53 +10,53 @@ class ParticipantTable {
 
 	public function fetchAll() {
 		$sql = 'SELECT id, name FROM users';
-		$resultSet = $this->conn->query($sql);
-		$users = array();
-		foreach ($resultSet->fetchAll() as $key => $data) {
-			$users[] = new Participant($data);
+		$resultSet = $this->conn->query( $sql );
+		$users = [];
+		foreach ( $resultSet->fetchAll() as $key => $data ) {
+			$users[] = new Participant( $data );
 		}
 		return $users;
 	}
 
-	public function fetchByID($id) {
-		$stmt = $this->conn->prepare('SELECT id, name FROM users WHERE id = :id');
-		$stmt->bindValue(':id', $id);
-		if ($stmt->execute()) {
+	public function fetchByID( $id ) {
+		$stmt = $this->conn->prepare( 'SELECT id, name FROM users WHERE id = :id' );
+		$stmt->bindValue( ':id', $id );
+		if ( $stmt->execute() ) {
 			$data = $stmt->fetch();
-			return new Participant($data);
+			return new Participant( $data );
 		}
 		return NULL;
 	}
 
-	public function fetchByName($name) {
-		$stmt = $this->conn->prepare('SELECT id, name FROM users WHERE name = :name');
-		$stmt->bindValue(':name', $name);
-		if ($stmt->execute()) {
+	public function fetchByName( $name ) {
+		$stmt = $this->conn->prepare( 'SELECT id, name FROM users WHERE name = :name' );
+		$stmt->bindValue( ':name', $name );
+		if ( $stmt->execute() ) {
 			$data = $stmt->fetch();
-			return new Participant($data);
+			return new Participant( $data );
 		}
 		return NULL;
 	}
-		
-	public function fetchSubmissions($id) {
-		$stmt = $this->conn->prepare('SELECT c.id, c.title, c.game, u.link, u.points FROM contests c, userentries u 
-										WHERE u.contestid = c.id AND c.public = 1 AND userid = ?');
-		if ($stmt->execute(array($id))) {
+
+	public function fetchSubmissions( $id ) {
+		$stmt = $this->conn->prepare( 'SELECT c.id, c.title, c.game, u.link, u.points FROM contests c, userentries u
+										WHERE u.contestid = c.id AND c.public = 1 AND userid = ?' );
+		if ( $stmt->execute( [ $id ] ) ) {
 			return $stmt->fetchAll();
 		}
 		return NULL;
 	}
-	
-	public function fetchByContest($id) {
-		$stmt = $this->conn->prepare('SELECT id, name, link, points, maxpossiblepoints
+
+	public function fetchByContest( $id ) {
+		$stmt = $this->conn->prepare( 'SELECT id, name, link, points, maxpossiblepoints
 										FROM users, userentries
 										WHERE id = userid AND contestid = :contestid
-										ORDER BY points DESC, maxpossiblepoints DESC');
-		$stmt->bindValue(':contestid', $id);
-		$users = array();
-		if ($stmt->execute()) {
-			foreach ($stmt->fetchAll() as $key => $data) {
-				$users[] = new Participant($data);
+										ORDER BY points DESC, maxpossiblepoints DESC' );
+		$stmt->bindValue( ':contestid', $id );
+		$users = [];
+		if ( $stmt->execute() ) {
+			foreach ( $stmt->fetchAll() as $key => $data ) {
+				$users[] = new Participant( $data );
 			}
 		}
 		return $users;
