@@ -175,7 +175,7 @@ class SpecialBracketContest extends SpecialPage {
 
 		$output .= '</div>';
 
-		$out->addWikitext( $output );
+		$out->addWikiTextAsContent( $output );
 	}
 
 	function addContestsTable( $contests ) {
@@ -233,7 +233,7 @@ class SpecialBracketContest extends SpecialPage {
 			];
 		}
 
-		$out->addWikitext( self::buildTableWikitext( $contestsTable ) );
+		$out->addWikiTextAsContent( self::buildTableWikitext( $contestsTable ) );
 	}
 
 	function getSubmissionLinkFromURL( $url ) {
